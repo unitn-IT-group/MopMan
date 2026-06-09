@@ -5,9 +5,9 @@ public class MonsterCrossfade : MonoBehaviour
     public AudioSource voiceSource;    //ubiq hijacked communication channel
     public AudioSource staticSource;   //Monster static noise
 
-    public float maxVoiceDistance = 10f; //Maximum communication distance
+    public float maxVoiceDistance = 8f; //Maximum communication distance
 
-    public float maxMonsterDistance = 5f;  //Maximum monster effect distance
+    public float maxMonsterDistance = 4f;  //Maximum monster effect distance
     public float maxYDifference = 2.5f;
 
     //Effects for monster creepiness

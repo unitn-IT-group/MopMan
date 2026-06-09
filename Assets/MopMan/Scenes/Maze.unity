@@ -55160,8 +55160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterCrossfade
   voiceSource: {fileID: 1831451125}
   staticSource: {fileID: 1831451125}
-  maxVoiceDistance: 10
-  maxMonsterDistance: 5
+  maxVoiceDistance: 8
+  maxMonsterDistance: 4
   maxYDifference: 1
   maxDistortion: 0.8
   pitchWobbleAmt: 0.15
