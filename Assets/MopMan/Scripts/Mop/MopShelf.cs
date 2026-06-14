@@ -44,6 +44,10 @@ public class MopShelf : MonoBehaviour
         foreach (var slot in slots)
             if (slot.mopType != null && slot.mopType.upgradeIndex == index)
             {
+                // Equipping a mop means it (and everything below it) is unlocked
+                // for this client too, so both players share the same shop state.
+                MarkUnlocked(slot.mopType);
+                RefreshSlotLocks();
                 Equip(slot.mopType, sendNetworkMessage: false);
                 return;
             }
@@ -61,6 +65,13 @@ public class MopShelf : MonoBehaviour
     {
         if (mop != null && mop.upgradeIndex > HighestUnlockedIndex)
             HighestUnlockedIndex = mop.upgradeIndex;
+    }
+
+    private void RefreshSlotLocks()
+    {
+        foreach (MopSlot slot in slots)
+            if (slot.mopType != null)
+                slot.SetUnlocked(slot.mopType.upgradeIndex <= HighestUnlockedIndex);
     }
 
     public bool TryPurchase(MopType mop)
@@ -85,11 +96,11 @@ public class MopShelf : MonoBehaviour
 
     public void NotifyEquipped(MopSlot slot) => equippedSlot = slot;
 
+    // Unlocks persist across games. Reset only un-equips: the mop disappears,
+    // and clicking an already-unlocked slot re-equips it for free.
     public void ResetMop()
     {
-        HighestUnlockedIndex = -1;
         equippedSlot = null;
-        foreach (MopSlot slot in slots) slot.ResetUnlock();
         if (sceneMopRoot != null) sceneMopRoot.SetActive(false);
         OnMopEquipped?.Invoke(null);
     }

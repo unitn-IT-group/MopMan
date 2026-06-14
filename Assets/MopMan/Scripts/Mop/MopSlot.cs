@@ -37,10 +37,9 @@ public class MopSlot : MonoBehaviour
         UpdateVisual();
     }
 
-    public void ResetUnlock()
+    public void SetUnlocked(bool value)
     {
-        Unlocked = startsUnlocked;
-        if (Unlocked && shelf != null) shelf.MarkUnlocked(mopType);
+        Unlocked = value;
         UpdateVisual();
     }
 

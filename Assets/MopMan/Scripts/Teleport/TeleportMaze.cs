@@ -50,8 +50,9 @@ public class Teleport : MonoBehaviour
 
             Debug.Log("Player teleported and assigned role: " + roleToAssign.ToString());
 
-            // Hide the start pad once used; GameManager re-enables it on restart.
-            gameObject.SetActive(false);
+            // Hide the start pad on both clients; GameManager re-enables it on restart.
+            if (GameManager.Instance != null) GameManager.Instance.HidePad(gameObject);
+            else gameObject.SetActive(false);
         }
     }
 }

@@ -6597,6 +6597,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  OnGameOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1609669259}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnRestart:
     m_PersistentCalls:
       m_Calls:
@@ -6604,6 +6619,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1249033168}
+        m_TargetAssemblyTypeName: MonsterPatrol, Assembly-CSharp
+        m_MethodName: ResetMonster
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6766,6 +6793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb20158dd366e0f6ac24a40d7ac0df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyZone
+  checkInterval: 0.3
 --- !u!65 &201919023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6785,8 +6813,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 0.4, z: 4}
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Size: {x: 5, y: 3, z: 4}
+  m_Center: {x: 0, y: 1.4, z: 0}
 --- !u!4 &202051965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5579099416332200016, guid: 125f7a367991145bc920aff2d6ec9647, type: 3}
@@ -8036,7 +8064,7 @@ GameObject:
   - component: {fileID: 244573770}
   - component: {fileID: 244573769}
   - component: {fileID: 244573773}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MopPlusSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16655,7 +16683,7 @@ GameObject:
   - component: {fileID: 558649670}
   - component: {fileID: 558649672}
   - component: {fileID: 558649671}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17157,7 +17185,7 @@ MonoBehaviour:
   mopType: {fileID: 11400000, guid: 0f6278d74f45b442eb90b4a3188591f9, type: 2}
   minScrubSpeed: 0.15
   passInterval: 0.15
-  debug: 1
+  debug: 0
 --- !u!65 &567235034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19588,7 +19616,7 @@ GameObject:
   - component: {fileID: 627327888}
   - component: {fileID: 627327890}
   - component: {fileID: 627327889}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20661,7 +20689,7 @@ GameObject:
   - component: {fileID: 642850466}
   - component: {fileID: 642850468}
   - component: {fileID: 642850467}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21706,7 +21734,7 @@ GameObject:
   - component: {fileID: 675671354}
   - component: {fileID: 675671353}
   - component: {fileID: 675671352}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26430,7 +26458,7 @@ GameObject:
   - component: {fileID: 833536346}
   - component: {fileID: 833536345}
   - component: {fileID: 833536344}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27351,7 +27379,7 @@ GameObject:
   - component: {fileID: 868667968}
   - component: {fileID: 868667967}
   - component: {fileID: 868667966}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29347,7 +29375,7 @@ GameObject:
   - component: {fileID: 911968754}
   - component: {fileID: 911968753}
   - component: {fileID: 911968757}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SuperMopSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32690,7 +32718,7 @@ GameObject:
   - component: {fileID: 1018639857}
   - component: {fileID: 1018639856}
   - component: {fileID: 1018639860}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MopZillaSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37361,7 +37389,7 @@ GameObject:
   - component: {fileID: 1171924471}
   - component: {fileID: 1171924470}
   - component: {fileID: 1171924469}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50111,13 +50139,13 @@ GameObject:
   - component: {fileID: 1609669263}
   - component: {fileID: 1609669262}
   - component: {fileID: 1609669261}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: PlayAgainSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1609669260
 Transform:
   m_ObjectHideFlags: 0
@@ -51219,7 +51247,7 @@ GameObject:
   - component: {fileID: 1639933697}
   - component: {fileID: 1639933696}
   - component: {fileID: 1639933695}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51879,7 +51907,7 @@ GameObject:
   - component: {fileID: 1666172217}
   - component: {fileID: 1666172219}
   - component: {fileID: 1666172218}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52346,7 +52374,7 @@ GameObject:
   - component: {fileID: 1676945498}
   - component: {fileID: 1676945497}
   - component: {fileID: 1676945501}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: BaseMopSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53295,7 +53323,7 @@ GameObject:
   - component: {fileID: 1693257672}
   - component: {fileID: 1693257671}
   - component: {fileID: 1693257670}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56139,8 +56167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MopController
   vrTriggerAction: {fileID: 0}
-  actionKey: 1
-  useMouse: 1
+  actionKey: 32
   currentSlot: {fileID: 0}
 --- !u!4 &1833620533 stripped
 Transform:
@@ -58309,7 +58336,7 @@ GameObject:
   - component: {fileID: 1931672081}
   - component: {fileID: 1931672080}
   - component: {fileID: 1931672079}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58791,7 +58818,7 @@ GameObject:
   - component: {fileID: 1956333631}
   - component: {fileID: 1956333630}
   - component: {fileID: 1956333629}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59125,7 +59152,7 @@ GameObject:
   - component: {fileID: 1969102873}
   - component: {fileID: 1969102875}
   - component: {fileID: 1969102874}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61222,7 +61249,7 @@ GameObject:
   - component: {fileID: 2044997803}
   - component: {fileID: 2044997802}
   - component: {fileID: 2044997801}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61453,7 +61480,7 @@ GameObject:
   - component: {fileID: 2055310709}
   - component: {fileID: 2055310708}
   - component: {fileID: 2055310707}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
