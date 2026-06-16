@@ -22,7 +22,6 @@ public class MotionDetection : MonoBehaviour
     {
         
         float distanceMoved = Vector3.Distance(transform.position, lastPosition);
-        Debug.Log("Distance Moved: " + distanceMoved);
 
         if (distanceMoved > 0 && !audioSource.isPlaying)
         {
